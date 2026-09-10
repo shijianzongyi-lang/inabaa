@@ -156,7 +156,7 @@ judgebtn.addEventListener('click', () => {
   const share_twitter = document.getElementById("js-share-twitter");
   share_twitter.setAttribute(
 	  "href",
-	  "https://twitter.com/share?url=" + "https://shijianzongyi-lang.github.io/wanwan/" + "&text=" + share_title + "&hashtags=いなばあキャラ診断"
+	  "https://twitter.com/share?url=" + "https://shijianzongyi-lang.github.io/inabaa/" + "&text=" + share_title + "&hashtags=いなばあキャラ診断"
   );
 });
 
