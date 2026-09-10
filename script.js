@@ -51,6 +51,18 @@ document.querySelectorAll('div[id^="quest"]').forEach((question) => {
   slidebox.classList = "slidebox";
   const questNumber = question.id.match(/\d+$/)[0];//今のid番号
   slidebox.innerHTML = `<label class="slidelabel"><input type="range" id="slide${questNumber}" list="values"/></label>
+      <div class="values">
+        <div class="textNonmatch option">あてはまらない</div>
+        <div class="option">-</div>
+        <div class="option">ー</div>
+        <div class="option">どちらでもない</div>
+        <div class="option">ー</div>
+        <div class="option">-</div>
+        <div class="textMatch option">あてはまる</div>
+      </div>`;
+  question.appendChild(slidebox);
+});
+/*
       <datalist id="values">
         <option value="0" label="あてはまらない" class="textNonmatch"></option>
         <option value="16" label="-"></option>
@@ -59,9 +71,8 @@ document.querySelectorAll('div[id^="quest"]').forEach((question) => {
         <option value="68" label="ー"></option>
         <option value="84" label="-"></option>
         <option value="100" label="あてはまる" class="textMatch"></option>
-      </datalist>`;
-  question.appendChild(slidebox);
-});
+      </datalist>
+*/
 
 // ［表示］ボタンを押したら…
 judgebtn.addEventListener('click', () => {
