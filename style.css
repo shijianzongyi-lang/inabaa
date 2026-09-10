@@ -52,15 +52,15 @@ div[id^="quest"] {/*設問毎のカード的デザイン*/
 /*.slidelabel {
   margin-bottom: 10px;
 }*/
-datalist {/*メモリまとめる*/
+.values {/*メモリまとめる*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   writing-mode: vertical-lr;
   width: 90%;
-  margin: 5px auto 0 auto;
+  margin: 10px auto 0 auto;
 }
-option {/*datalistの子要素*/
+.option {/*datalistの子要素*/
   padding: 0;
 }
 /*スライダーのinputタグ*/
