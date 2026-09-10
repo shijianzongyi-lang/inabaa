@@ -151,13 +151,17 @@ judgebtn.addEventListener('click', () => {
     const resultcard = document.createElement("div");
     resultcard.classList.add("row");
     resultcard.setAttribute("role", "listitem");
+    let editedrate = sortedList[i].rate;
+    if(editedrate == 100) {
+      editedrate = 99;
+    }
     resultcard.innerHTML = `<div class="row-top">
           <span class="row-name"><span class="row-avatar"><img src="${sortedList[i].img}" width="100%" height="100%"></span>${sortedList[i].name}</span>
-          <span class="row-percent">${sortedList[i].rate}<span>%</span></span>
+          <span class="row-percent">${editedrate}<span>%</span></span>
         </div>
-        <div class="bar-track" role="img" aria-label="${sortedList[i].name}との類似度 ${sortedList[i].rate}%">
-          <div class="bar-fill" style="width:${sortedList[i].rate}%;"></div>
-          <div class="bar-thumb" style="left:${sortedList[i].rate}%;"></div>
+        <div class="bar-track" role="img" aria-label="${sortedList[i].name}との類似度 ${editedrate}%">
+          <div class="bar-fill" style="width:${editedrate}%;"></div>
+          <div class="bar-thumb" style="left:${editedrate}%;"></div>
         </div>`;
     otherList.appendChild(resultcard);
   }
